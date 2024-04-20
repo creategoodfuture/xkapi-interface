@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/name")
+
 public class NameController {
 
     @GetMapping("/")
