@@ -1,5 +1,6 @@
 package com.xk.xkapiinterface.contorller;
 
+import com.xk.xkapiinterface.model.User;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,12 @@ public class NameController {
     @PostMapping("/post")
     public String getNameByPost(@RequestParam String name) {
         return "POST 你的名字是" + name;
+    }
+
+    @PostMapping("/user")
+    public String getUsernameByPost(@RequestBody User user){
+        return "POST 用户名字是" + user.getUsername();
+
     }
 
 }
